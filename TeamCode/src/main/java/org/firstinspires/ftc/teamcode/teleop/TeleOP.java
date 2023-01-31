@@ -15,7 +15,7 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name = "TeleOP")
 
-public class Reapr_Main_TeleOP extends LinearOpMode {
+public class TeleOP extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
         // Declare our motors
