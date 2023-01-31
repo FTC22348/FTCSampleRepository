@@ -21,7 +21,7 @@ public class TeleOP extends LinearOpMode {
         // Declare our motors
         // Make sure your ID's match your configuration
 
-        // Meccanum Drivetrain
+        // Meccanum Drivetrain (PORTS MAY NEED TO CHANGE BY ACCESSING THE "Configure Robot" SECTION OF DRIVER STATION APP)
         DcMotor motorFrontLeft = hardwareMap.dcMotor.get("motorFrontLeft"); // Port 0
         DcMotor motorBackLeft = hardwareMap.dcMotor.get("motorBackLeft"); // Port 1
         DcMotor motorFrontRight = hardwareMap.dcMotor.get("motorFrontRight"); // Port 2
@@ -30,8 +30,7 @@ public class TeleOP extends LinearOpMode {
         // Reverse the right side motors
         // Reverse left motors if you are using NeveRests
         motorFrontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        motorBackLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        // motorBackRight.setDirection(DcMotorSimple.Direction.REVERSE);  // This was connected on the expansion hub, it needs to be reversed
+        motorBackLeft.setDirection(DcMotorSimple.Direction.REVERSE); //ROTATIONS NEED TO BE REVERSE ON ONE SIDE SO BOTH SIDES ROTATE IN SAME DIRECTION
 
 
 
@@ -53,7 +52,7 @@ public class TeleOP extends LinearOpMode {
 
         if (isStopRequested()) return;
 
-        boolean isSlowMode = false;
+        boolean isSlowMode = false; //SLOW MODE IS ACTIVATED WITH THE LEFT STICK BUTTON
         double dividePower=1.0;
 
         while (opModeIsActive()) {
